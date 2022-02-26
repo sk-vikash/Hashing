@@ -4,7 +4,7 @@ pipeline {
     stage("#### Build ####") {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
-        sh "mvn -v"
+        ## sh "mvn -v"
       }
     }
     stage("#### Deploy ####")  {
