@@ -3,13 +3,14 @@ pipeline {
   stages {
     stage("#### Build ####") {
       steps {
-        echo "$GIT_URL"
+        echo sh(script: 'env|sort', returnStdout: true)
         sh "mvn -v"
       }
     }
     stage("#### Deploy ####")  {
       steps {
         echo "deploy"
+        sh "env"
       }
     }
   }
