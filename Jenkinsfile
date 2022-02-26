@@ -4,6 +4,7 @@ pipeline {
   stages {
     stage("#### Build ####") {
       steps {
+        echo $GIT_URL
         sh "mvn -v"
       }
     }
