@@ -9,6 +9,7 @@ pipeline {
     stage("#### Check Maven Verion ####")  {
       steps {
          sh "mvn -v"
+         sh "mvn clean compile"
       }
     }
   }
