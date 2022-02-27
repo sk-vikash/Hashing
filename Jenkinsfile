@@ -2,11 +2,11 @@ pipeline {
   agent any
 
   options {
-    buildDiscarder(loRotator(numToKeepStr: '30')
+    buildDiscarder(logRotator(numToKeepStr: '30'))
     disableConcurrentBuilds()
     timeout(time: 1, unit: 'HOURS')
     timestamps()
-    ansiCOlor('xterm')
+    ansiColor('xterm')
   }
 
   stages {
