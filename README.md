@@ -22,7 +22,7 @@ Checkout or fork the repository. Execute the Maven install goal to build the tar
   
 ## Operation
 
-The service operation is normally automated but can be manually operated
+The service operation is normally automated but can be manually operated.
 
   * Navigate to the filesystem path containing the assembled jar file
   * Use `mvn clean package` to generate the jar artifacts.
