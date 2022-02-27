@@ -10,17 +10,17 @@ pipeline {
   }
 
   stages {
-    stage {
+    stage('Clean and Initialise') {
         steps {
             cleanWs()
         }
     }
-    stage("### Print All Pre Defined Variable ##") {
+    stage('### Print All Pre Defined Variable ##') {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
       }
     }
-    stage("### Maven ##")  {
+    stage('### Maven ##')  {
       steps {
          sh 'mvn -v'
          sh 'mvn clean compile'
