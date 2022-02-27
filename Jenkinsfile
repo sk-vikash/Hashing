@@ -10,11 +10,6 @@ pipeline {
   }
 
   stages {
-    stage('Clean and Initialise') {
-        steps {
-            cleanWs()
-        }
-    }
     stage('### Print All Pre Defined Variable ##') {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
@@ -25,6 +20,11 @@ pipeline {
          sh 'mvn -v'
          sh 'mvn clean compile'
       }
+    }
+    stage('Clean and Initialise') {
+        steps {
+            cleanWs()
+        }
     }
   }
 }
