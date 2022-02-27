@@ -4,7 +4,6 @@ pipeline {
     stage("#### Check All Pre Defined Variable ####") {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
-        sh "mvn -v"
       }
     }
     stage("#### Check Maven Verion ####")  {
