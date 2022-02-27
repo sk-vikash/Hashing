@@ -10,6 +10,11 @@ pipeline {
   }
 
   stages {
+    stage {
+        steps {
+            cleanWs()
+        }
+    }
     stage("### Print All Pre Defined Variable ##") {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
