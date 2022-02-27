@@ -26,5 +26,5 @@ The service operation is normally automated but can be manually operated.
 
   * Navigate to the filesystem path containing the assembled jar file
   * Use `mvn clean package` to generate the jar artifacts.
-  * Use `java -jar generic-hash.1.0-SNAPSHOT.jar` at the command line to start the service####
+  * Use `java -jar generic-hash.1.0-SNAPSHOT.jar` at the command line to start the service##
    
