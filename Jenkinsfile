@@ -1,16 +1,15 @@
 pipeline {
   agent any 
   stages {
-    stage("#### Build ####") {
+    stage("#### Check All Pre Defined Variable ####") {
       steps {
         echo sh(script: 'env|sort', returnStdout: true)
         sh "mvn -v"
       }
     }
-    stage("#### Deploy ####")  {
+    stage("#### Check Maven Verion ####")  {
       steps {
-        echo "deploy"
-        sh "env"
+         sh "mvn -v"
       }
     }
   }
