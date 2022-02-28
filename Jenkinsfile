@@ -23,7 +23,8 @@ pipeline {
     }
     stage('### Build Jar')  {
       steps {
-         sh 'echo "Build Jar"'
+         sh 'mvn package'
+         sh 'ls -ltra'
       }
     }
     stage('### Clean') {
