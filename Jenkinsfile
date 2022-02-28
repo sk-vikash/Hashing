@@ -21,7 +21,7 @@ pipeline {
          sh 'mvn clean compile'
       }
     }
-    stage('### Clean and Initialise ##') {
+    stage('### Clean ##') {
         steps {
             cleanWs()
         }
