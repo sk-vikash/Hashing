@@ -21,6 +21,11 @@ pipeline {
          sh 'mvn clean compile'
       }
     }
+    stage('### Build Jar ##')  {
+      steps {
+         sh 'echo "Build Jar"'
+      }
+    }
     stage('### Clean ##') {
         steps {
             cleanWs()
